@@ -1,7 +1,7 @@
 {
   "name": "@kne/prompts-remote-components",
-  "version": "1.0.1",
-  "description": "AI prompts 文档集合，用于生成基于 BizUnit 架构的前端业务模块、RemoteLoader 远程模块加载和 FormInfo 表单组件",
+  "version": "1.0.2",
+  "description": "前端组件库开发辅助提示词集合，包含 BizUnit 业务模块生成、RemoteLoader 远程加载、FormInfo 表单组件、国际化、文档生成、示例编写等任务的 AI 提示词模板",
   "files": [
     "prompts"
   ],
