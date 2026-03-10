@@ -1,6 +1,6 @@
 {
   "name": "@kne/prompts-remote-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "AI prompts 文档集合，用于生成基于 BizUnit 架构的前端业务模块、RemoteLoader 远程模块加载和 FormInfo 表单组件",
   "files": [
     "prompts"
@@ -19,6 +19,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": ""
-  }
+    "url": "git+https://github.com/kne-union/prompts-remote-components.git"
+  },
+  "homepage": "https://github.com/kne-union/prompts-remote-components"
 }
