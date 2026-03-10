@@ -1,0 +1,24 @@
+{
+  "name": "@kne/prompts-remote-components",
+  "version": "1.0.0",
+  "description": "AI prompts 文档集合，用于生成基于 BizUnit 架构的前端业务模块、RemoteLoader 远程模块加载和 FormInfo 表单组件",
+  "files": [
+    "prompts"
+  ],
+  "scripts": {
+    "init": "husky",
+    "prettier": "prettier --config .prettierrc --write '{libs/**/*,index}.{js,jsx,ts,tsx,json,css,scss}'",
+    "lint-staged": "npx lint-staged"
+  },
+  "keywords": [
+    "prompts",
+    "frontend",
+    "react"
+  ],
+  "author": "linzp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}
