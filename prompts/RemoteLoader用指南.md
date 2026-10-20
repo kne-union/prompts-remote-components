@@ -474,6 +474,30 @@ useEffect(() => {
 }, []);
 ```
 
+### 5. 抽屉统一使用 components-core:Drawer
+
+需要侧滑抽屉时，**禁止**直接使用 antd 的 `Drawer`，统一通过 remote-loader 加载 `components-core:Drawer`（基于 `@kne/react-modal`，已适配移动端与示例手机预览的挂载、叠层）。
+
+- 声明式：`components-core:Drawer`，`open` / `onClose` / `title` / `width` / `placement` 等用法与 antd 一致
+- 底部默认带「取消 / 确定」按钮；纯展示、管理类抽屉（列表、菜单、详情）须传 `footer={null}` 去掉，需要自定义按钮用 `footerButtons`
+- 命令式：`components-core:Drawer@useDrawer`（`Global` 已内置 `DrawerContextHolder`）
+- 抽屉表单：`components-core:FormInfo@useFormDrawer`
+
+```javascript
+import {createWithRemoteLoader} from '@kne/remote-loader';
+
+const EnvDrawer = createWithRemoteLoader({
+    modules: ['components-core:Drawer']
+})(({remoteModules, open, onClose, children}) => {
+    const [Drawer] = remoteModules;
+    return (
+        <Drawer title="环境管理" width={720} footer={null} open={open} onClose={onClose}>
+            {children}
+        </Drawer>
+    );
+});
+```
+
 ## 常见问题
 
 ### Q: 模块加载失败怎么办？
